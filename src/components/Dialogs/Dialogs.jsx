@@ -3,14 +3,20 @@ import s from './Dialogs.module.css';
 import DialogItems from "./DialogsItems/DialogItems";
 import Messages from "./Messages/Messages";
 
-const Dialogs = () => {
+const Dialogs = (props) => {
+
+    let messageElements = props.messages.map(m => <Messages message={m.message} id={m.id}/>)
+
+    let dialogsElements = props.dialogs.map(d => <DialogItems name={d.Name} id={d.id}/>)
+
     return (
         <div className={s.dialogs}>
-            <DialogItems name='Vadim' id='1'/>
-            <DialogItems name='Vlad' id='2'/>
-            <DialogItems name='Dasha' id='3'/>
-            <DialogItems name='Misha' id='4'/>
-            <Messages/>
+            <div>
+                {dialogsElements}
+            </div>
+            <div>
+                {messageElements}
+            </div>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 .info{
     display: flex;
+  padding: 28px;
 }
 
 .pochinka{
@@ -9,8 +10,6 @@
 
 .info img{
   width: 250px;
-  padding: 15px;
-
 }
 
 .item{

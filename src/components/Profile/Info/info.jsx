@@ -1,7 +1,6 @@
 import React from "react";
 import s from './info.module.css';
 
-
 const Info = () => {
     return (
         <div className={s.info}>
@@ -10,22 +9,9 @@ const Info = () => {
             </div>
             <div className='s.pochinka'>
                 <div className={s.item}>
-                    ava+info
-                </div>
-                <div className={s.item}>
-                    ava+info
-                </div>
-                <div className={s.item}>
-                    ava+info
-                </div>
-                <div className={s.item}>
-                    ava+info
-                </div>
-                <div className={s.item}>
-                    ava+info
+                    bio
                 </div>
             </div>
-
         </div>
     )
 }
