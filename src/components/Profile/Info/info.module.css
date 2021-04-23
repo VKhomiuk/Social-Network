@@ -1,17 +1,19 @@
-.info{
-    display: flex;
-  padding: 28px;
+.info {
+    display: grid;
+    grid-template-areas:
+    "i b";
+    grid-template-columns: 4fr 6fr;
+    padding: 28px;
 }
 
-.pochinka{
-  display: flex;
-  flex-direction: column;
+
+.info img {
+    grid-area: i;
+    width: 250px;
 }
 
-.info img{
-  width: 250px;
-}
-
-.item{
-  color: #f2ffdb;
+.item {
+    grid-area: b;
+    display: block;
+    color: #f2ffdb;
 }

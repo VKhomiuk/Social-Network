@@ -1,0 +1,22 @@
+.friends {
+    padding: 7px;
+    margin-top: 60px;
+}
+
+.item a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    color: #370447;
+    display: flex;
+    text-decoration: none;
+}
+
+.item:hover a{
+  text-decoration: underline;
+  color: #f2ffdb;
+  transition: 0.5s linear;
+}
+
+.item a.active{
+  color: #f2ffdb;
+}

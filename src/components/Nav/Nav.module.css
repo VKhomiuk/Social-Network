@@ -25,3 +25,7 @@
 .item a.active{
   color: #f2ffdb;
 }
+
+.friendsBar{
+  display: flex;
+}
