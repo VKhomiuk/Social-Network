@@ -1,68 +1,105 @@
-import {reRenderEntireTree} from "../render";
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-let state = {
-    profilePage:
-        {
-            posts: [
-                {id: 1, message: 'hi, how are you?', likesCounter: 1},
-                {id: 2, message: 'it\'s my first post', likesCounter: 20},
-            ],
-            newPostText: '',
+let store = {
+
+    _state: {
+        profilePage:
+            {
+                posts: [
+                    {id: 1, message: 'hi, how are you?', likesCounter: 1},
+                    {id: 2, message: 'it\'s my first post', likesCounter: 20},
+                ],
+                newPostText: '',
+            },
+        dialogPage:
+            {
+                dialogs: [
+                    {id: 1, Name: 'Vadim'},
+                    {id: 2, Name: 'Vlad'},
+                    {id: 3, Name: 'Dasha'},
+                    {id: 4, Name: 'Misha'},
+                    {id: 5, Name: 'Roma'},
+                ],
+                messages: [
+                    {id: 1, message: 'I`m fine thanks'},
+                    {id: 2, message: 'Hi'},
+                    {id: 3, message: 'How are you'},
+                ],
+                newMessageText: '',
+            },
+        sideBar: {
+            friends: [{id: 1, name: 'Roma'},
+                {id: 2, name: 'Vlad'},
+                {id: 3, name: 'Dasha'},
+            ]
         },
-    dialogPage:
-        {
-            dialogs: [
-                {id: 1, Name: 'Vadim'},
-                {id: 2, Name: 'Vlad'},
-                {id: 3, Name: 'Dasha'},
-                {id: 4, Name: 'Misha'},
-            ],
-            messages: [
-                {id: 1, message: 'I`m fine thanks'},
-                {id: 2, message: 'Hi'},
-                {id: 3, message: 'How are you'},
-            ],
-            newMessageText: 'fd',
-        },
-    sideBar: {
-        friends: [{id: 1, name: 'Misha'},
-            {id: 2, name: 'Vlad'},
-            {id: 3, name: 'Dasha'},
-        ]
+    },
+
+    _callSubscriber() {
+        console.log('state changed')
+    },
+
+    getState() {
+        return this._state
+    },
+
+    subscribe(observer) {
+        this._callSubscriber = observer;
+    },
+
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 5,
+                message: this._state.profilePage.newPostText,
+                likesCounter: 0
+            };
+
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber();
+        }
+        if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber();
+        }
+        if (action.type === 'ADD-MESSAGE') {
+            let newMessage = {
+                id: 4,
+                message: this._state.dialogPage.newMessageText,
+            };
+            this._state.dialogPage.messages.push(newMessage);
+            this._state.dialogPage.newMessageText = '';
+            this._callSubscriber();
+        }
+        if (action.type === 'UPDATE-NEW-MESSAGE-TEXT') {
+            this._state.dialogPage.newMessageText = action.newText;
+            this._callSubscriber();
+        }
     }
 
-};
 
-window.state = state;
-export let addMessage = () => {
-    let newMessage = {
-        id: 4,
-        message: state.dialogPage.newMessageText,
-    };
-    state.dialogPage.messages.push(newMessage);
-    state.dialogPage.newMessageText = '';
-    reRenderEntireTree(state);
 }
 
-export let updateNewMessageText = (newText) => {
-    state.dialogPage.newMessageText = newText;
-    reRenderEntireTree(state);
-}
+export const addMessageActionCreator = () => ({
+        type: ADD_MESSAGE
+})
 
-export let addPost = () => {
-    let newPost = {
-        id: 5,
-        message: state.profilePage.newPostText,
-        likesCounter: 0
-    };
-    state.profilePage.posts.push(newPost);
-    state.profilePage.newPostText = '';
-    reRenderEntireTree(state);
-}
+export const updateNewMessageTextActionCreator = (newText) => ({
+        type: UPDATE_NEW_MESSAGE_TEXT,
+        newText: newText
+})
 
-export let updateNewPostText = (newText) => {
-    state.profilePage.newPostText = newText;
-    reRenderEntireTree(state);
-}
+export const addPostActionCreator = () => ({
+        type: ADD_POST
+})
 
-export default state;
+export const updateNewPostTExtActionCreator = (newText) => ({
+        type: UPDATE_NEW_POST_TEXT,
+        newText: newText
+})
+
+export default store;

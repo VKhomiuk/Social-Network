@@ -1,5 +1,6 @@
 .messages {
     grid-area: m;
+    background: #f2ffdb;
 }
 
 .message {
