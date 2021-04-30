@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 *{
   margin: 0;
@@ -15,9 +15,8 @@ body{
   "n c ";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
-  margin: 0 auto;
   width: 1200px;
+  margin: 0 auto;
 }
 
 .app-wrapper-content{

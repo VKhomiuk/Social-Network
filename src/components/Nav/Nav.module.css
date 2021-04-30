@@ -1,31 +1,49 @@
-.nav{
-  grid-area: n;
-  background: linear-gradient(to bottom, #7E00FF, #d02aff);
-  padding-top: 28px;
+.nav {
+    grid-area: n;
+    background: #545257;
+    padding-top: 28px;
+
 }
 
-.nav :nth-child(5){
-  margin-top: 28px;
+.nav :nth-child(7) {
+    margin-top: 60%;
 }
 
-.item a{
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 28px;
-  color: #370447;
-  margin-left: 45px;
-  text-decoration: none;
+.item a svg {
+    width: 18%;
 }
 
-.item:hover a{
-  text-decoration: underline;
-  color: #f2ffdb;
-  transition: 0.5s linear;
+.item a img.active {
+    fill: #995EB2;
 }
 
-.item a.active{
-  color: #f2ffdb;
+.item {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
 }
 
-.friendsBar{
-  display: flex;
+
+.item a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+    color: #9D9F9F;
+
+    text-decoration: none;
+}
+
+.item:hover a {
+
+    color: #995EB2;
+    transition: 0.5s linear;
+}
+.item svg:hover { color: rgba(213, 102, 223, 0.09); fill: rgba(213, 102, 223, 0.09); }
+
+.item a.active {
+    color: #995EB2;
+}
+
+.friendsBar {
+    display: flex;
 }

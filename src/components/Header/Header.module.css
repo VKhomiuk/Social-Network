@@ -1,9 +1,18 @@
 .header{
   grid-area: h;
-  background: linear-gradient(to top, #7E00FF, #d02aff);
+  background: #545257;
+  padding: 10px;
+  display: flex;
 }
+
 .header img{
-  width: 155px;
-  margin-left: 20px;
-  /*color: #7e00ff;*/
+  width: 100px;
+}
+
+.logo{
+  margin-left: 28px;
+}
+
+.logo2{
+  width: 80px;
 }
