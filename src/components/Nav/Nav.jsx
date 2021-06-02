@@ -2,12 +2,12 @@ import React from "react";
 import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
 import Friends from "./Friends/Friends";
-import png1 from "./../Images/House.svg";
-import png2 from "./../Images/ChatCircleDots.svg";
-import png3 from "./../Images/CalendarBlank.svg";
-import png4 from "./../Images/MusicNotes.svg";
-import png5 from "./../Images/Settings.svg";
-import png6 from "./../Images/Users.svg"
+import {ReactComponent as Png1} from "../Images/House.svg";
+import {ReactComponent as Png2} from "./../Images/ChatCircleDots.svg";
+import {ReactComponent as Png3} from "./../Images/CalendarBlank.svg";
+import {ReactComponent as Png4} from "./../Images/MusicNotes.svg";
+import {ReactComponent as Png5} from "./../Images/Settings.svg";
+import {ReactComponent as Png6} from "./../Images/Users.svg"
 
 const Nav = (props) => {
 
@@ -16,33 +16,43 @@ const Nav = (props) => {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
-                <NavLink activeClassName={s.active} to='/profile'>
-                    <img src={png1} alt="png1" />
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/profile'>
+                    <Png1/>
                     Profile
                 </NavLink>
             </div>
             <div className={s.item}>
-                <img src={png2} alt="png2" />
-                <NavLink activeClassName={s.active} to='/dialogs'>Messages</NavLink>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/dialogs'>
+                    <Png2/>
+                    Messages
+                </NavLink>
             </div>
             <div className={s.item}>
-                <img src={png3} alt="png3" />
-                <NavLink activeClassName={s.active} to='/news'>News</NavLink>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/news'>
+                    <Png3 />
+                    News
+                </NavLink>
             </div>
             <div className={s.item}>
-                <img src={png4} alt="png4" />
-                <NavLink activeClassName={s.active} to='/music'>Music</NavLink>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/music'>
+                    <Png4 />
+                    Music
+                </NavLink>
             </div>
             <div className={s.item}>
-                <img src={png6} alt="png6" />
-                <NavLink activeClassName={s.active} to='/Friends'>Friends</NavLink>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/Friends'>
+                    <Png6 />
+                    Friends
+                </NavLink>
             </div>
             <div className={s.friendsBar}>
                 {friendList}
             </div>
-            <div className={s.item}>
-                <img src={png5} alt="png5" />
-                <NavLink activeClassName={s.active} to='/settings'>Settings</NavLink>
+            <div className={`${s.item} ${s.item_settings}`}>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/settings'>
+                    <Png5/>
+                    Settings
+                </NavLink>
             </div>
 
         </nav>
