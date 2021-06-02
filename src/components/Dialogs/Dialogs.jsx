@@ -19,24 +19,27 @@ const Dialogs = (props) => {
         props.dispatch(action);
     }
 
+    console.log(props.dialogPage)
 
-    let messageElements = props.state.messages.map(m => <Messages message={m.message} id={m.id}/>)
+    let messageElements = props.dialogPage.messages.map(m => <Messages key={m.id} message={m.message} id={m.id}/>)
 
-    let dialogsElements = props.state.dialogs.map(d => <DialogItems name={d.Name} id={d.id}/>)
+    let dialogsElements = props.dialogPage.dialogs.map(d => <DialogItems key={d.id} name={d.Name} id={d.id}/>)
 
     return (
         <div className={s.dialogs}>
             <div>
                 {dialogsElements}
             </div>
-            <div>
+            <div className={s.dialog_message}>
                 <div>
                     {messageElements}
                 </div>
                 <div className={s.addMessage}>
                     <div>
-                        <textarea onChange={onMessageChange} ref={newMessageElement} value={props.newMessageText}/>
-                        {props.newMessageText}
+                        <textarea onChange={onMessageChange}
+                                  placeholder='Enter your message'
+                                  ref={newMessageElement}
+                                  value={props.dialogPage.newMessageText}/>
                     </div>
                     <div>
                         <button onClick={addMessage}>Add message</button>
