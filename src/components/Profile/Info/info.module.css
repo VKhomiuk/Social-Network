@@ -1,19 +1,18 @@
 .info {
-    display: grid;
-    grid-template-areas:
-    "i b";
-    grid-template-columns: 4fr 6fr;
+    display: flex;
     padding: 28px;
 }
 
 
 .info img {
-    grid-area: i;
     width: 250px;
 }
 
 .item {
-    grid-area: b;
-    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+    text-decoration: none;
+    /*display: block;*/
     color: #f2ffdb;
 }

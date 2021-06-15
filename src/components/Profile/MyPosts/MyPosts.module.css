@@ -2,6 +2,16 @@
     padding: 28px;
 }
 
-.item{
-    color: aquamarine;
+/*.item{*/
+/*    color: aquamarine;*/
+/*}*/
+
+.inputForm{
+    text-align: center;
+    padding-right: 100px;
+    padding-top: 11px;
+    background: #545257;
+    border: 2px solid #995EB3;
+    box-sizing: border-box;
+    border-radius: 84px;
 }

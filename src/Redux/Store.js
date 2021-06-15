@@ -7,6 +7,9 @@ let store = {
     _state: {
         profilePage:
             {
+                info: [
+                    {id: 1, fName: 'Vadym Khomiuk', birth: '25.09.2002', job: 'Gemicle'}
+                ],
                 posts: [
                     {id: 1, message: 'hi, how are you?', likesCounter: 1},
                     {id: 2, message: 'it\'s my first post', likesCounter: 20},
