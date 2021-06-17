@@ -11,7 +11,9 @@ import {ReactComponent as Png6} from "./../Images/Users.svg"
 
 const Nav = (props) => {
 
-    let friendList = props.friends.map(f => <Friends id={f.id} key={f.id} name={f.name}/>)
+    let state = props.sideBar
+
+    let friendList = state.friends.map(f => <Friends id={f.id} key={f.id} name={f.name}/>)
 
     return (
         <nav className={s.nav}>
