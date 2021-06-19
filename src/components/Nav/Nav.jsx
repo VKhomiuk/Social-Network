@@ -17,7 +17,7 @@ const Nav = (props) => {
 
     return (
         <>
-            {props.lang === 'eng' ? <NavEng friendList /> : <NavRus friendList />}
+            {props.lang === 'eng' ? <NavEng friendList={friendList} /> : <NavRus friendList={friendList} />}
         </>
     )
 }
