@@ -7,6 +7,7 @@ let mapStateToProps = (state) => {
         messages: state.dialogPage.messages,
         dialogs: state.dialogPage.dialogs,
         newMessageText: state.dialogPage.newMessageText,
+        lang: state.headerState.lang
     };
 };
 

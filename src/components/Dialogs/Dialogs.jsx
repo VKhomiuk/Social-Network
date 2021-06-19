@@ -35,12 +35,12 @@ const Dialogs = (props) => {
                 <div className={s.addMessage}>
                     <div>
                         <textarea onChange={onMessageChange}
-                                  placeholder='Enter your message'
+                                  placeholder={props.lang === 'eng' ? 'Enter your message' : 'Введите сообщение' }
                                   ref={newMessageElement}
                                   value={props.newMessageText}/>
                     </div>
                     <div>
-                        <button onClick={addMessage}>Add message</button>
+                        <button onClick={addMessage}>{props.lang === 'eng' ? 'Send message' : 'Отправить сообщение' }</button>
                     </div>
                 </div>
             </div>

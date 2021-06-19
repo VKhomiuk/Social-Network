@@ -6,7 +6,7 @@ const MyPosts = (props) => {
 
     let newPostElement = React.createRef();
 
-    let postsElements = props.posts.map(p => <Post id={p.id} message={p.message} key={p.id} likes={p.likesCounter}/>);
+    let postsElements = props.posts.map(p => <Post lang={props.lang} id={p.id} message={p.message} key={p.id} likes={p.likesCounter}/>);
 
 
     let onAddPost = () => {
@@ -20,14 +20,12 @@ const MyPosts = (props) => {
 
     return (
         <div className={s.myPosts}>
-            <div>
+            <div className={s.input__wrapper}>
                 <textarea className={s.inputForm} onChange={onPostChange}
-                          placeholder='Enter your message'
+                          placeholder={props.lang === 'eng' ? 'Enter your message' : 'Введите сообщение'}
                           ref={newPostElement}
                           value={props.newPostText}/>
-            </div>
-            <div>
-                <button onClick={onAddPost}>Post</button>
+                <button className={s.input__submit} onClick={onAddPost}>+</button>
             </div>
             <div>
                 {postsElements.reverse()}

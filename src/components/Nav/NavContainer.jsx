@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 let mapStateToProps = (state) => {
     return {
         sideBar: state.sideBar,
+        lang: state.headerState.lang
     };
 };
 

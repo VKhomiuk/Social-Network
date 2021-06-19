@@ -1,4 +1,5 @@
 const UPDATE_THEME = 'UPDATE_THEME';
+const UPDATE_LANGUAGE = 'UPDATE_LANGUAGE';
 
 let initialState = {
     darkTheme: true,
@@ -13,9 +14,9 @@ const headerReducer = (state = initialState, action) => {
                 ...state, darkTheme: !state.darkTheme
             }
         }
-        case UPDATE_THEME: {
+        case UPDATE_LANGUAGE: {
             return{
-                ...state, lang: !state.darkTheme
+                ...state, lang: state.lang === 'eng' ? 'rus' : 'eng'
             }
         }
         default: {
@@ -27,6 +28,10 @@ const headerReducer = (state = initialState, action) => {
 
 export const updateTheme = () => ({
     type: UPDATE_THEME
+})
+
+export const updateLanguage = () => ({
+    type: UPDATE_LANGUAGE
 })
 
 export default headerReducer;

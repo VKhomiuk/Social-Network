@@ -16,10 +16,10 @@ const Users = (props) => {
                                 {u.followed
                                     ? <button onClick={() => {
                                         props.follow(u.id)
-                                    }}>Follow</button>
+                                    }}>{props.lang === 'eng' ? 'Follow' : 'Подписаться' }</button>
                                     : <button onClick={() => {
                                         props.unFollow(u.id)
-                                    }}>Unfollow</button>}
+                                    }}>{props.lang === 'eng' ? 'Unfollow' : 'Отписаться' }</button>}
                             </div>
                         </span>
                         <span>

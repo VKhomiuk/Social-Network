@@ -4,7 +4,8 @@ import Info from "./info";
 
 let mapStateToProps = (state) => {
     return{
-        info: state.profilePage.info
+        lang: state.headerState.lang,
+        profilePage: state.profilePage,
     }
 }
 

@@ -6,6 +6,7 @@ let mapStateToProps = (state) => {
     return{
         posts: state.profilePage.posts,
         newPostText: state.profilePage.newPostText,
+        lang: state.headerState.lang
     };
 };
 

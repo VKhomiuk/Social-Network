@@ -16,6 +16,61 @@ const Nav = (props) => {
     let friendList = state.friends.map(f => <Friends key={f.id} {...f} />)
 
     return (
+        <>
+            {props.lang === 'eng' ? <NavEng friendList /> : <NavRus friendList />}
+        </>
+    )
+}
+
+const NavRus = (props) => {
+    return(
+        <nav className={s.nav}>
+            <div className={s.item}>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/profile'>
+                    <Png1/>
+                    Профиль
+                </NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/dialogs'>
+                    <Png2/>
+                    Сообщения
+                </NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/news'>
+                    <Png3 />
+                    Новости
+                </NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/music'>
+                    <Png4 />
+                    Музыка
+                </NavLink>
+            </div>
+            <div className={s.item}>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/Users'>
+                    <Png6 />
+                    Пользователи
+                </NavLink>
+            </div>
+            <div className={s.friendsBar}>
+                {props.friendList}
+            </div>
+            <div className={`${s.item} ${s.item_settings}`}>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/settings'>
+                    <Png5/>
+                    Настройки
+                </NavLink>
+            </div>
+
+        </nav>
+    )
+}
+
+const NavEng = (props) => {
+    return(
         <nav className={s.nav}>
             <div className={s.item}>
                 <NavLink className={s.nav__btn} activeClassName={s.active} to='/profile'>
@@ -48,7 +103,7 @@ const Nav = (props) => {
                 </NavLink>
             </div>
             <div className={s.friendsBar}>
-                {friendList}
+                {props.friendList}
             </div>
             <div className={`${s.item} ${s.item_settings}`}>
                 <NavLink className={s.nav__btn} activeClassName={s.active} to='/settings'>
