@@ -1,7 +1,7 @@
 import React from "react";
 import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
-import Friends from "./Friends/Friends";
+import Friends from "./FriendsList/FriendsList";
 import {ReactComponent as Png1} from "../Images/House.svg";
 import {ReactComponent as Png2} from "./../Images/ChatCircleDots.svg";
 import {ReactComponent as Png3} from "./../Images/CalendarBlank.svg";
@@ -13,7 +13,7 @@ const Nav = (props) => {
 
     let state = props.sideBar
 
-    let friendList = state.friends.map(f => <Friends id={f.id} key={f.id} name={f.name}/>)
+    let friendList = state.friends.map(f => <Friends key={f.id} {...f} />)
 
     return (
         <nav className={s.nav}>
@@ -42,9 +42,9 @@ const Nav = (props) => {
                 </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink className={s.nav__btn} activeClassName={s.active} to='/Friends'>
+                <NavLink className={s.nav__btn} activeClassName={s.active} to='/Users'>
                     <Png6 />
-                    Friends
+                    Users
                 </NavLink>
             </div>
             <div className={s.friendsBar}>

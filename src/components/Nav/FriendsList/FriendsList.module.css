@@ -1,0 +1,40 @@
+.friends {
+    padding-left: 10%;
+    margin: 10px 5% 0;
+
+}
+
+.item a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    color: #370447;
+    display: flex;
+    text-decoration: none;
+}
+
+.item:hover a{
+  text-decoration: underline;
+  color: #f2ffdb;
+  transition: 0.5s linear;
+}
+
+.item a.active{
+  color: #f2ffdb;
+}
+.friend__img img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.friend__name{
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #9d9f9f;
+    padding-top: 5px;
+    margin-left: 10px;
+}

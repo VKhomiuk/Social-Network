@@ -3,6 +3,7 @@
   background: #545257;
   padding: 10px;
   display: flex;
+  justify-content: space-between;
 }
 
 .header img{
@@ -10,9 +11,18 @@
 }
 
 .logo{
-  margin-left: 28px;
+  margin-left: 10px;
+  justify-self: flex-start;
 }
 
 .logo2{
   width: 80px;
+}
+.theme{
+  display: flex;
+  align-items: center;
+}
+.theme img{
+  width: 25px;
+  height: 25px;
 }

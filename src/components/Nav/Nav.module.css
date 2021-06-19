@@ -24,11 +24,11 @@
 .nav__btn{
     display: flex;
     align-items: center;
+    padding-left: 15%;
 }
 .item a {
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
-    margin-left: 20px;
     color: #9D9F9F;
 
     text-decoration: none;
@@ -36,6 +36,9 @@
 
 .item:hover a {
     color: #995EB2;
+}
+.item svg{
+    margin-right: 20px;
 }
 .item svg  path{
     stroke: #9d9f9f
@@ -68,4 +71,9 @@
 }
 .item_settings>.active svg path {
     fill: #995EB2;
+}
+.friendsBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }

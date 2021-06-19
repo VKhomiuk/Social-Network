@@ -23,3 +23,9 @@ body{
   grid-area: c;
   background-color: #545257;
 }
+.lightApp{
+  filter: invert(1);
+}
+.lightApp img{
+  filter: invert(1);
+}

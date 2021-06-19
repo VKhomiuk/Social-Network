@@ -1,19 +1,15 @@
 import React from "react";
 import s from './Profile.module.css';
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
-import Info from "./Info/info";
+import InfoContainer from "./Info/infoContainer";
 
 
-const Profile = (props) => {
+const Profile = () => {
 
     return (
         <div className={s.profile}>
-            <Info
-                store={props.store}
-            />
-            <MyPostsContainer
-                store={props.store}
-            />
+            <InfoContainer/>
+            <MyPostsContainer/>
         </div>
 
     )
