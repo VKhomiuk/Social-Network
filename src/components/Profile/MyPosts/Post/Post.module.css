@@ -7,6 +7,7 @@
   box-sizing: border-box;
   padding: 22px 36px 24px 18px;
   border-radius: 20px;
+
 }
 
 .likes{
@@ -27,6 +28,9 @@
 }
 .post__info p:nth-child(1){
   margin: 5px 0 27px;
+}
+.post__info p:nth-child(2){
+  word-wrap: break-word;;
 }
 .post__details{
   align-self: center;

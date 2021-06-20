@@ -27,19 +27,19 @@ let mapDispatchToProps = (dispatch) => {
 };
 
 const Header = connect(mapStateToProps, mapDispatchToProps)(props => {
-    return(
-        <header className={s.header}>
-            <div style={{display: 'flex'}}>
-                <img className={s.logo2} src={logo2} alt="Logo" />
-                <img className={s.logo} src={logo} alt="Logo" />
-            </div>
-            <div className={s.theme}>
-                <button onClick={props.updateLanguage}>{props.lang === 'eng' ? 'rus' : 'eng' }</button>
-                <span>{props.darkTheme ? <img onClick={() => props.updateTheme()} src={Sun} alt=""/> : <img onClick={() => props.updateTheme()} src={Moon} alt=""/>}</span>
-            </div>
-        </header>
-    )
-}
+        return(
+            <header className={s.header}>
+                <div style={{display: 'flex'}}>
+                    <img className={s.logo2} src={logo2} alt="Logo" />
+                    <img className={s.logo} src={logo} alt="Logo" />
+                </div>
+                <div className={s.theme}>
+                    <button onClick={props.updateLanguage}>{props.lang === 'eng' ? 'rus' : 'eng' }</button>
+                    <span>{props.darkTheme ? <img onClick={() => props.updateTheme()} src={Sun} alt=""/> : <img onClick={() => props.updateTheme()} src={Moon} alt=""/>}</span>
+                </div>
+            </header>
+        )
+    }
 )
 
 export default Header;

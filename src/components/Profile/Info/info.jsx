@@ -24,8 +24,10 @@ const Info = (props) => {
 
 const InfoItem = (props) => {
     return(
-        <div>
-            {props.fName}
+        <div className={s.profile__info}>
+            <p>{props.fName}</p>
+            <p>Birth: {props.birth}</p>
+            <p>Job: {props.job}</p>
         </div>
     )
 }
