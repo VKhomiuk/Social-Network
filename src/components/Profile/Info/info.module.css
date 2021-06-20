@@ -5,7 +5,9 @@
 
 
 .info img {
-    width: 250px;
+    width: 181px;
+    height: 181px;
+    border-radius: 50%;
 }
 
 .item {
@@ -15,4 +17,15 @@
     text-decoration: none;
     /*display: block;*/
     color: #f2ffdb;
+}
+.profile__info{
+    margin-left: 10px;
+}
+.profile__info p:nth-child(1){
+    font-size: 36px;
+    margin: 10px 0 25px;
+}
+.profile__info p:nth-child(2){
+    font-size: 18px;
+    margin: 10px 0;
 }

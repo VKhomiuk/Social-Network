@@ -21,8 +21,22 @@
 .theme{
   display: flex;
   align-items: center;
+  width: 10%;
+  justify-content: space-around;
+}
+.theme button{
+  background-color: transparent;
+  border: 2px solid #6F567A ;
+  color: #fff;
+  width: 40px;
+  padding: 3px 5px ;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .theme img{
   width: 25px;
   height: 25px;
+  cursor: pointer;
+  transition: all 0.5s;
 }

@@ -8,23 +8,26 @@
 
 .inputForm{
     text-align: left;
-    padding: 5px 40px;
+    padding: 16px 49px 0;
     background: #545257;
     border: 2px solid #995EB3;
     box-sizing: border-box;
     border-radius: 84px;
     resize: none;
     outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
 }
 .input__wrapper{
     position: relative;
 }
 .input__submit{
     position: absolute;
-    left: 210px;
-    top: 5px;
+    right: 4%;
+    top: 10px;
     font-size: 30px;
-    color: #fff;
+    color: #995EB3;
     background-color: transparent;
     border: none;
     outline: none;

@@ -13,13 +13,13 @@
 }
 
 .item:hover a{
-  text-decoration: underline;
-  color: #f2ffdb;
-  transition: 0.5s linear;
+    text-decoration: underline;
+    color: #f2ffdb;
+    transition: 0.5s linear;
 }
 
 .item a.active{
-  color: #f2ffdb;
+    color: #f2ffdb;
 }
 .friend__img img{
     width: 35px;
@@ -27,7 +27,7 @@
     border-radius: 50%;
 }
 .friend__name{
-    font-family: Ubuntu;
+    font-family: Ubuntu, serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
