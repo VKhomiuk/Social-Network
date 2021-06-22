@@ -1,0 +1,11 @@
+.profile__info{
+    margin-left: 10px;
+}
+.profile__info p:nth-child(1){
+    font-size: 36px;
+    margin: 10px 0 25px;
+}
+.profile__info p:nth-child(2){
+    font-size: 18px;
+    margin: 10px 0;
+}

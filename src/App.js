@@ -1,6 +1,5 @@
 import './App.css';
 import React from "react";
-import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
@@ -9,20 +8,13 @@ import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import NavContainer from "./components/Nav/NavContainer";
 import UsersContainer from "./components/Users/UsersContainer";
-import {connect} from "react-redux";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 
-let mapStateToProps = (state) => {
-    return {
-        darkTheme: state.headerState.darkTheme
-    };
-};
-
-
-const App = connect(mapStateToProps)(props => {
+const App = (props) => {
     return (
         <div className={`app-wrapper ${props.darkTheme ? 'darkApp' : 'lightApp'}`} >
-            <Header />
+            <HeaderContainer />
             <NavContainer />
             <div className='app-wrapper-content'>
                 <Route path='/profile' render={() => <Profile />}/>
@@ -34,6 +26,6 @@ const App = connect(mapStateToProps)(props => {
             </div>
         </div>
     )
-});
+};
 
 export default App;

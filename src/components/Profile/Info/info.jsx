@@ -1,5 +1,6 @@
 import React from "react";
 import s from './info.module.css';
+import InfoItem from "./InfiItem/InfoItem";
 
 const Info = (props) => {
     console.log()
@@ -18,16 +19,6 @@ const Info = (props) => {
                         birth={i.birth}
                         job={i.job}/>)}
             </div>
-        </div>
-    )
-}
-
-const InfoItem = (props) => {
-    return(
-        <div className={s.profile__info}>
-            <p>{props.fName}</p>
-            <p>Birth: {props.birth}</p>
-            <p>Job: {props.job}</p>
         </div>
     )
 }
