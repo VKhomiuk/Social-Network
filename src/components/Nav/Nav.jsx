@@ -11,9 +11,7 @@ import {ReactComponent as Png6} from "./../Images/Users.svg"
 
 const Nav = (props) => {
 
-    let state = props.sideBar
-
-    let friendList = state.friends.map(f => <Friends key={f.id} {...f} />)
+    let friendList = props.sideBar.friends.map(f => <Friends key={f.id} {...f} />)
 
     return (
         <>
@@ -31,7 +29,7 @@ const NavRus = (props) => {
                     Профиль
                 </NavLink>
             </div>
-            <div className={s.item}>
+            <div className={`${s.item} ${s.item_messages}`}>
                 <NavLink className={s.nav__btn} activeClassName={s.active} to='/dialogs'>
                     <Png2/>
                     Сообщения
@@ -78,7 +76,7 @@ const NavEng = (props) => {
                     Profile
                 </NavLink>
             </div>
-            <div className={s.item}>
+            <div className={`${s.item} ${s.item_messages}`}>
                 <NavLink className={s.nav__btn} activeClassName={s.active} to='/dialogs'>
                     <Png2/>
                     Messages

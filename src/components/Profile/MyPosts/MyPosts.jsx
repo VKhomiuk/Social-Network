@@ -24,6 +24,7 @@ const MyPosts = (props) => {
                 <textarea className={s.inputForm} onChange={onPostChange}
                           placeholder={props.lang === 'eng' ? 'Enter your message' : 'Введите сообщение'}
                           ref={newPostElement}
+                          // id=$'userPost'
                           value={props.newPostText}/>
                 <button className={s.input__submit} onClick={onAddPost}>+</button>
             </div>
@@ -33,5 +34,13 @@ const MyPosts = (props) => {
         </div>
     )
 }
+
+// $("userPost").keypress(function (e) {
+//     if(e.which === 13 && !e.shiftKey) {
+//         $(this).closest("form").submit();
+//         e.preventDefault();
+//     }
+// });
+
 
 export default MyPosts;

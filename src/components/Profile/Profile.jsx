@@ -8,8 +8,8 @@ const Profile = () => {
 
     return (
         <div className={s.profile}>
-            <InfoContainer/>
-            <MyPostsContainer/>
+            <InfoContainer />
+            <MyPostsContainer />
         </div>
 
     )

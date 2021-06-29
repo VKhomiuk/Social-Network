@@ -7,7 +7,8 @@ const Users = (props) => {
     return (
         <div className={s.users}>
             {
-                props.users.map(u => <div key={u.id}>
+                props.users.map(u => <div className={s.users__item} key={u.id}>
+
                         <span>
                             <div>
                                 <img alt='' src={u.photoUrl}/>
@@ -16,10 +17,10 @@ const Users = (props) => {
                                 {u.followed
                                     ? <button onClick={() => {
                                         props.follow(u.id)
-                                    }}>{props.lang === 'eng' ? 'Follow' : 'Подписаться' }</button>
+                                    }}>{props.lang === 'eng' ? 'Follow' : 'Подписаться'}</button>
                                     : <button onClick={() => {
                                         props.unFollow(u.id)
-                                    }}>{props.lang === 'eng' ? 'Unfollow' : 'Отписаться' }</button>}
+                                    }}>{props.lang === 'eng' ? 'Unfollow' : 'Отписаться'}</button>}
                             </div>
                         </span>
                         <span>

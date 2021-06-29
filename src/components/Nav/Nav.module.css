@@ -13,7 +13,7 @@
 }
 
 .item a img.active {
-    fill: #995EB2;
+    fill: #995EB3;
 }
 
 .item {
@@ -35,7 +35,7 @@
 }
 
 .item:hover a {
-    color: #995EB2;
+    color: #995EB3;
 }
 .item svg{
     margin-right: 20px;
@@ -43,15 +43,15 @@
 .item svg  path{
     stroke: #9d9f9f
 }
-.item:hover svg path{stroke: #995EB2; }
+.item:hover svg path{stroke: #995EB3; }
 
-.active svg  path{stroke: #995EB2; }
+.active svg path{stroke: #995EB3; }
 
 .active {
     background-color: rgba(213, 102, 223, 0.09);
 }
 .item a.active {
-    color: #995EB2;
+    color: #995EB3;
 }
 
 .friendsBar {
@@ -60,8 +60,9 @@
 .item_settings{
     margin-bottom: 50px;
 }
+
 .item_settings:hover svg path{
-    fill: #995EB2;
+    fill: #995EB3;
 }
 .item_settings:hover svg path:nth-child(4){
     fill: transparent;
@@ -70,7 +71,25 @@
     fill: transparent;
 }
 .item_settings>.active svg path {
-    fill: #995EB2;
+    fill: #995EB3;
+}
+.item_messages>.active svg path:nth-child(2){
+    fill: #995EB3;
+}
+.item_messages>.active svg path:nth-child(3){
+    fill: #995EB3;
+}
+.item_messages>.active svg path:nth-child(4){
+    fill: #995EB3;
+}
+.item_messages:hover svg path:nth-child(2){
+    fill: #995EB3;
+}
+.item_messages:hover svg path:nth-child(3){
+    fill: #995EB3;
+}
+.item_messages:hover svg path:nth-child(4){
+    fill: #995EB3;
 }
 .friendsBar{
     display: flex;
